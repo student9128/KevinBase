@@ -11,9 +11,6 @@ import com.kevin.tech.kevinbase.R;
 import com.kevin.tech.kevinbase.view.AnyTextView;
 import com.kevin.tech.kevinbase.view.LoadingDialog;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 
 /**
  * Created by <a href="http://blog.csdn.net/student9128">Kevin</a> for Project KevinBase on 2017/9/8.
@@ -34,13 +31,9 @@ public abstract class BaseActivity extends AppBaseActivity {
 
     public LoadingDialog mLoadingDialog;
 
-    @BindView(R.id.tv_title)
     public AnyTextView tvTitle;
-    @BindView(R.id.iv_function)
     public ImageView ivFunction;
-    @BindView(R.id.iv_back)
     public ImageView ivBack;
-    @BindView(R.id.tool_bar)
     public Toolbar toolBar;
     public ActionBar actionBar;
 
@@ -48,7 +41,10 @@ public abstract class BaseActivity extends AppBaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(setLayoutResId());
-        ButterKnife.bind(this);
+        toolBar = (Toolbar) findViewById(R.id.tool_bar);
+        ivBack = (ImageView) findViewById(R.id.iv_back);
+        tvTitle = (AnyTextView) findViewById(R.id.tv_title);
+        ivFunction = (ImageView) findViewById(R.id.iv_function);
         setSupportActionBar(toolBar);
         actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
