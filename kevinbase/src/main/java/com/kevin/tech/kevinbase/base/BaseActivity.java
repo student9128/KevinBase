@@ -6,9 +6,9 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.kevin.tech.kevinbase.R;
-import com.kevin.tech.kevinbase.view.AnyTextView;
 import com.kevin.tech.kevinbase.view.LoadingDialog;
 
 
@@ -31,7 +31,7 @@ public abstract class BaseActivity extends AppBaseActivity {
 
     public LoadingDialog mLoadingDialog;
 
-    public AnyTextView tvTitle;
+    public TextView tvTitle;
     public ImageView ivFunction;
     public ImageView ivBack;
     public Toolbar toolBar;
@@ -43,7 +43,7 @@ public abstract class BaseActivity extends AppBaseActivity {
         setContentView(setLayoutResId());
         toolBar = (Toolbar) findViewById(R.id.tool_bar);
         ivBack = (ImageView) findViewById(R.id.iv_back);
-        tvTitle = (AnyTextView) findViewById(R.id.tv_title);
+        tvTitle = (TextView) findViewById(R.id.tv_title);
         ivFunction = (ImageView) findViewById(R.id.iv_function);
         setSupportActionBar(toolBar);
         actionBar = getSupportActionBar();

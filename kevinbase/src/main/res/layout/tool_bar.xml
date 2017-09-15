@@ -24,15 +24,14 @@
             android:src="@drawable/ic_back"
             android:visibility="gone" />
 
-        <com.kevin.tech.kevinsummary.view.AnyTextView
+        <TextView
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:visibility="gone"
-            app:typeface="OpenSans-SemiBold.ttf" />
+            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/iv_function"
